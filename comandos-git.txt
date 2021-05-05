@@ -18,3 +18,9 @@ git commit -m "MENSAGEM AMIGAVEL"
 
 # Mostrar histórico de commits
 git log
+
+# Listar branches
+git branch
+
+# Criar novo branch
+git branch NOME_DO_NOVO_BRANCH
