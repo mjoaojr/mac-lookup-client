@@ -1,0 +1,11 @@
+# Instalação do cliente git
+- MacOS: brew install git
+- Linux debian based: apt-get install git
+- Linux redhat based: yum install git
+- Windows: Baixar o isntalador MSI
+
+# Inicializar repositorio git local
+git init
+
+# Status do repositorio
+git status
