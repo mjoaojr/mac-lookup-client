@@ -9,3 +9,9 @@ git init
 
 # Status do repositorio
 git status
+
+# Adicionar arquivos na area de stag
+git add NOME_DO_ARQUIVO
+
+# Commitar arquivos na area de stag
+git commit -m "MENSAGEM AMIGAVEL"
