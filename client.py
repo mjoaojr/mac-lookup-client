@@ -1,4 +1,5 @@
 import requests
+import json
 
 def ler_csv():
     macs = {}
@@ -16,5 +17,23 @@ def ler_csv():
 
     return macs
 
-m = ler_csv()
-print(m)
+def buscar_vendor(mac_address):
+    url = "https://ckytpcuse7.execute-api.us-east-1.amazonaws.com/prod/api/v1"
+    url = f"{url}/macs/{mac_address}"
+
+    response = requests.get(url)
+    if response.status_code==200:
+        dic = json.loads(response.text)
+        return dic
+    else:
+        print("Erro ao fazer request")
+    
+
+macs_dic = ler_csv()
+macs=list(macs_dic.values())
+mac_exemplo = macs[0]
+
+dic = buscar_vendor(mac_exemplo)
+fabricante = dic.get('vendor')
+
+print(f"O fabricante do MAC: {mac_exemplo} é {fabricante}")
